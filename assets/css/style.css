@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    font-family: var(--juicy-family1);
+}
+
+:root {
+    --juicy-family1: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* body{
+    background-color: #faf4e9;
+} */
+.logo {
+    width: 80px;
+}
+
+.btn-primary {
+    background-color: #f1613c;
+    color: white;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px 40px;
+    font-family: var(--juicy-family1);
+    font-weight: 500;
+    margin: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+:not(.btn-check)+.btn:active {
+    background-color: #f27757;
+}
+
+.max-vh-100 {
+    max-height: 100vh;
+}
+
+.primary-header {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.border-1,
+.border-2 {
+    border: 1px solid #f1613b;
+    border-width: 2vw 6vw !important;
+    border-radius: 6vw;
+    background-color: #f1613b;
+}
+
+.border-2 {
+    /* border-radius: 0 !important; */
+    border-color: #f4aab8;
+    background: #f4aab8;
+}
+
+.main-videos video {
+    height: 50vh;
+    display: block;
+    width: 100%;
+    border-radius: 4rem;
+    object-fit: cover;
+}
+
+.blog-card {
+    height: 350px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.mid-container {
+    height: 300px;
+    position: relative;
+}
+
+.mid-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    object-fit: contain;
+    margin: auto;
+    left: 0;
+}
+
+.blog-card-mainimg {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.blog-hoverable-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    transition: .3s;
+    top: 50%;
+}
+
+.blog-card:hover .blog-hoverable-content {
+    top: 0;
+}
+
+.blog-arrow {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    width: 25px !important;
+    height: 25px;
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media(max-width:992px) {
+    .hero-video {
+        height: 500px !important;
+    }
+
+    .main-videos video {
+        height: 300px;
+    }
+
+    .border-1,
+    .border-2 {
+        border-width: 3vw 6vw !important;
+    }
+}
