@@ -23,23 +23,23 @@ $(document).ready(function () {
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem est officiis recusandae placeat",
             imgSrc: "main-img.png",
             heading: "Balmore",
-            bg_color:"bg-success"
+            bg_color: "bg-success"
         },
         {
             text: "new lorem ispum",
             imgSrc: "main-img.png",
             heading: "Balmore",
-            bg_color:"bg-danger"
+            bg_color: "bg-danger"
         },
         {
             text: "new lorem ispum2",
             imgSrc: "main-img.png",
             heading: "Balmore",
-            bg_color:"bg-warning"
+            bg_color: "bg-warning"
         }
     ]
 
-    var car1_content = car1_DataArray.map(data =>`
+    var car1_content = car1_DataArray.map(data => `
         <div class="px-xxl-3 p-0 px-xl-2">
             <div class="blog-card rounded-4 position-relative text-white shadow-1 + ${data.bg_color}">
                 <div class="p-3">
@@ -77,5 +77,16 @@ $(document).ready(function () {
                 items: 3
             }
         }
+    });
+
+    $('.custom1').owlCarousel({
+        loop: true,
+        nav: true,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        items: 1,
+        margin: 30,
+        stagePadding: 30,
+        smartSpeed: 450,
     });
 });
