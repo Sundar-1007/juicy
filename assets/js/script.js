@@ -82,11 +82,12 @@ $(document).ready(function () {
     $('.custom1').owlCarousel({
         loop: true,
         nav: true,
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
+        animateOut: 'fadeOut',
         items: 1,
         margin: 30,
         stagePadding: 30,
         smartSpeed: 450,
     });
+
+    AOS.refresh();
 });

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Example</title>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<style>
+    .owl-carousel .owl-item {
+        text-align: center;
+    }
+
+    .owl-carousel .owl-item img {
+        max-width: 100%;
+        height: 300px;
+        border-radius: 8px;
+    }
+</style>
+<body>
+
+<div class="owl-carousel owl-theme">
+    <div class="item animate__animated animate__flipInX">
+        <img src="assets/images/Glasss-1-compressed.jpg" alt="Image 1">
+    </div>
+    <div class="item animate__animated animate__flipInX">
+        <img src="assets/images/Glasss-2-compressed.jpg" alt="Image 2">
+    </div>
+    <div class="item animate__animated animate__flipInX">
+        <img src="assets/images/Glasss-3-compressed.jpg" alt="Image 3">
+    </div>
+    <div class="item animate__animated animate__flipInX">
+        <img src="assets/images/Glasss-4-compressed.jpg" alt="Image 4">
+    </div>
+    <div class="item animate__animated animate__flipInX">
+        <img src="assets/images/Glasss-5-compressed.jpg" alt="Image 5">
+    </div>
+    <!-- Add more items as needed -->
+</div>
+
+<!-- Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true
+            // You can customize other options as needed
+        });
+    });
+</script>
+
+</body>
+</html>
