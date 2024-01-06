@@ -76,6 +76,8 @@ img {
     height: 350px;
     cursor: pointer;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
 }
 
 .mid-container {
@@ -98,6 +100,7 @@ img {
     left: 0;
     height: 100%;
     object-fit: cover;
+    width: 100%;
     z-index: -1;
 }
 
@@ -189,6 +192,55 @@ footer img {
 
 .pointer{
     cursor: pointer;
+}
+
+.girl img{
+    width: 100%;
+    max-width: 350px;
+}
+
+.girl.one img{
+    transform: rotateY(180deg);
+}
+
+.think1 {
+    width: 200px;
+    font-size: 10px;
+    height: 200px;
+    background: #f1613c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-left: 10%;
+}
+
+.think1 p {
+    padding: 10px;
+    margin: 0;
+}
+
+
+.think2 {
+    width: 15px;
+    height: 14px;
+    background: #f1613c;
+    border-radius: 50%;
+    margin-left: 50%;
+}
+
+.girl:nth-child(2) .think1 {
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.girl:nth-child(2) .think2 {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 50%;
 }
 
 @keyframes ani1{

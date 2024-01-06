@@ -21,27 +21,31 @@ $(document).ready(function () {
     const car1_DataArray = [
         {
             text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem est officiis recusandae placeat",
-            imgSrc: "main-img.png",
+            imgSrc: "assets/videos/new400kb.mp4",
             heading: "Balmore",
-            bg_color: "bg-success"
+            bg_color: "bg-success",
+            dur:600
         },
         {
             text: "new lorem ispum",
-            imgSrc: "main-img.png",
+            imgSrc: "assets/videos/new400kb.mp4",
             heading: "Balmore",
-            bg_color: "bg-danger"
+            bg_color: "bg-danger",
+            dur:700
         },
         {
             text: "new lorem ispum2",
-            imgSrc: "main-img.png",
+            imgSrc: "assets/videos/new400kb.mp4",
             heading: "Balmore",
-            bg_color: "bg-warning"
+            bg_color: "bg-warning",
+            dur:800
         }
     ]
 
     var car1_content = car1_DataArray.map(data => `
-        <div class="px-xxl-3 p-0 px-xl-2">
-            <div class="blog-card rounded-4 position-relative text-white shadow-1 + ${data.bg_color}">
+        <div class="px-xxl-3 p-0 px-xl-2" data-aos = "fade-up" data-aos-duration="${data.dur}">
+            <a class="blog-card rounded-4 position-relative text-white shadow-1 + ${data.bg_color}" 
+            data-fancybox="gallery" href="${data.imgSrc}">
                 <div class="p-3">
                     <p class="special-text">
                         special text
@@ -49,17 +53,17 @@ $(document).ready(function () {
                     <p class="blog-text">${data.text}</p>
                 </div>
                 <div class="blog-hoverable-content p-3 overflow-hidden">
-                    <img src="${data.imgSrc}" class="blog-card-mainimg rounded-4" />
+                    <video src="${data.imgSrc}" class="blog-card-mainimg rounded-4"> <video/>
                     <h2 class="blog-head-text my-3 text-dark">${data.heading}</h2>
                 </div>
                 <img src="assets/images/Arrow.png" alt="assets/images/Arrow.png" class="blog-arrow">
-            </div>
+            </a>
         </div>`)
 
     $(".car-1").append(car1_content.join(''))
 
     $(".owl-carousel.car-1").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: false,
         autoplay: true,
